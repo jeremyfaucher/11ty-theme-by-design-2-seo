@@ -1,0 +1,9 @@
+# design2seo.com/robots.txt
+User-agent: googlebot
+
+Sitemap: https://design2seo.com/sitemap.xml
+
+User-agent: *
+Disallow: /blog/web-development/css/3d-type-using-perspective-css/template/
+
+Disallow: /blog/web-development/css/svg-text-with-video-background/template/

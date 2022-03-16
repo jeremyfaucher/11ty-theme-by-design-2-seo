@@ -1,0 +1,14 @@
+<article class="grid">
+<div>
+<h3 class="summary--title"><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+<div class="author">by <span>{{ post.data.author }}</span> on <span>{{ post.date | postDate }}</span>
+</div>
+</div>
+<p class="post--summary">{%- if (post.data.excerpt) -%}{{ post.data.excerpt }}{%- else -%}{{ post.templateContent | excerpt }}{%- endif -%}<a href="{{ post.url }}" class="read-more under--clr"> Read more...</a></p>
+<span class="topic">
+{%- if (tag == "tools-page") -%}
+{%- else -%}
+<a href="/blog/{{ post.data.categorySlug }}" class="btn btn--primary">{{ post.data.categoryName }}</a>
+{%- endif -%}
+</span>
+</article>

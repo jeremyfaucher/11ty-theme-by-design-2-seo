@@ -1,0 +1,24 @@
+---
+layout: "base.njk"
+---
+{%- if (full) -%}
+<section class="container post full no-bottom">
+{% include 'breadcrumb-post.njk' %}
+<h1 class="article--title">{{ title }}</h1>
+<div class="author">By: <a href="/about/" title="Posts by Jeremy Faucher" rel="author">{{ author }}</a> on {{ date | postDate }}</div>
+</section>
+{{ content | safe }}
+<section class="container post">
+{% include 'pagination.njk' %}
+</section>
+{%- else -%}
+<section class="container post">
+{% include 'breadcrumb-post.njk' %}
+<h1 class="article--title">{{ title }}</h1>
+<div class="author">By: <a href="/about/" title="Posts by admin" rel="author">{{ author }}</a> on {{ date | postDate }}</div>
+<article  class="post--bg">
+{{ content | safe }}
+</article>
+{% include 'pagination.njk' %}
+</section>
+{%- endif -%}

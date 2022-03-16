@@ -1,0 +1,18 @@
+<nav id="breadcrumbs">
+<span class="archive--title">
+{%- if tags == "toolsPosts" %}
+<a href="/tools/">Tools</a> »
+{%- endif -%}
+{%- if tags == "blogPosts" %}
+<a href="/blog/">Blog</a> »
+{%- endif -%}
+{%- if tag == "graphic-design-post" %} <span aria-current="page"><a href="/blog/{{ categorySlug }}">{{ categoryName }}</a> »</span>{% endif %}
+{%- if tag == "web-design-post" %} <span aria-current="page"><a href="/blog/web-design/">Web Design</a> »</span>{% endif %}
+{%- if tag == "seo-post" %} <a href="/blog/web-design/">Web Design</a> » <span aria-current="page"><a href="/blog/web-design/seo/">SEO</a> »</span>{% endif %}
+{%- if tag == "web-development-post" %} <span aria-current="page"><a href="/blog/web-development/">Web Development</a> »</span>{% endif %}
+{%- if tag == "css-post" %} <a href="/blog/web-development/">Web Development</a> » <span aria-current="page"><a href="/blog/web-development/css/">CSS</a> »</span>{% endif %}
+{%- if tag == "js-post" %} <a href="/blog/web-development/">Web Development</a> » <span aria-current="page"><a href="/blog/web-development/js/">JavaScript</a> »</span>{% endif %}
+	{%- if tag == "wordpress-post" %} <a href="/blog/web-development/">Web Development</a> » <span aria-current="page"><a href="/blog/web-development/wordpress/">WordPress</a> »</span>{% endif %}
+{%- if tag == "innovation-post" %} <span aria-current="page"><a href="/blog/innovation/">Innovation</a> »</span>{% endif %}
+</span>
+</nav>

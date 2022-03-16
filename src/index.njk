@@ -1,0 +1,42 @@
+---
+layout: 'base.njk'
+tag: home-page
+js_include: /assets/js/tween.js
+---
+<section class="no-bottom">
+<div class="container">
+<div class="hero--content text-center">
+<h1 class="section-title">11ty Starter Theme by Design 2 SEO</h1>
+<p>11ty starter theme with grid CSS, blog, sub-categories and SEO friendly.</p>
+</div>
+</div>
+</section>
+<section class="hero">
+<div class="container">
+<img src="assets/home-banner.svg">
+<div class="ol-two">
+{%- for post in collections.blog | reverse | limit(2) -%}
+  {% include 'post-latest.njk' %}
+{%- endfor -%}
+</div>
+</div>
+</section>
+<section class="section-bg home--about">
+<div class="container">
+<h2>Typewriter wolf ugh shoreditch brunch tote bag.</h2>
+<p>I'm baby hot chicken bitters irony thundercats etsy direct trade chillwave kickstarter truffaut unicorn crucifix shaman farm-to-table mixtape. Man braid wolf adaptogen chambray, irony chartreuse 90's shabby chic viral banjo live-edge. Twee try-hard mlkshk lomo raclette dreamcatcher narwhal craft beer.</p>
+<p>Kitsch crucifix truffaut chia flexitarian quinoa, tbh health goth man braid tote bag ramps raclette helvetica craft beer squid. Kitsch air plant gochujang, wolf occupy tumeric slow-carb typewriter umami art party taiyaki celiac mustache twee. Deep v literally mlkshk, woke try-hard vexillologist gochujang typewriter meggings farm-to-table.</p>
+<p>Trust fund retro seitan knausgaard, leggings kale chips echo park meh. Glossier viral before they sold out hashtag taiyaki. Lo-fi 3 wolf moon vice cloud bread mixtape art party everyday carry taxidermy cronut raw denim put a bird on it taiyaki cardigan photo booth blog.</p>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Recent Blog Posts</h2>
+<p class="no-top">YOLO pop-up synth fixie, slow-carb, fingerstache.</p>
+<div role="list" class="col-two">
+{%- for post in collections.blog | reverse | limit(5) -%}
+  {% include 'post-summary.njk' %}
+{%- endfor -%}
+</div>
+</div>
+</section> 

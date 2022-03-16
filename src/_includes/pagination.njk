@@ -1,0 +1,18 @@
+{%- set nextPost = collections.blog | getNextCollectionItem(page) -%}
+{%- set previousPost = collections.blog | getPreviousCollectionItem(page) -%}
+{%- if nextPost or previousPost -%}
+<nav class="nav--pagination col-two" role="navigation">
+<span class="nav--previous">
+{%- if previousPost %}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="3" stroke="currentColor" fill="none"><line x1="10.33" y1="32.63" x2="55.78" y2="32.63"/><polyline points="27.56 14.63 10.34 32.79 27.56 49.32"/></svg>
+<a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+{%- endif -%}
+</span>
+<span class="nav--next">
+{%- if nextPost -%}
+<a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" stroke-width="3" stroke="currentColor" fill="none"><line x1="55.78" y1="32.63" x2="10.33" y2="32.63"/><polyline points="38.55 14.63 55.78 32.79 38.55 49.32"/></svg>
+{%- endif -%}
+</span>
+</nav>
+{%- endif -%}

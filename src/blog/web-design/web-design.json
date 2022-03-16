@@ -1,0 +1,8 @@
+{
+	"layout": "post.njk",
+	"author": "admin",
+	"tags": ["webDesignPosts", "blog"],
+	"tag": "web-design-post",
+	"categorySlug": "web-design/",
+	"categoryName": "Web Design"
+}

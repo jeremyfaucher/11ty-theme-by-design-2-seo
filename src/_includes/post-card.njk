@@ -1,0 +1,12 @@
+<article class="grid">
+<div>
+<a href="{{ post.url }}"><img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="summary--image" width="1000" height="500"></a>
+<p class="summary--title"><a href="{{ post.url }}">{{ post.data.title }}</a></p>
+</div>
+<span class="topic">
+{%- if (tag == "tools-page") -%}
+{%- else -%}
+<a href="/blog/{{ post.data.categorySlug }}" class="btn btn--primary">{{ post.data.categoryName }}</a>
+{%- endif -%}
+</span>
+</article>

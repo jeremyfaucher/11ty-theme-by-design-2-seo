@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="/assets/favicon.png"/>
+{% include 'title-and-meta.njk' %}
+{%- set main %}{%- include "style.css" -%}{% endset %}
+<style>
+{{- main | cssmin | safe -}}
+</style>
+{%- if css_include %}
+<link rel="stylesheet" href="{{ css_include }}" />
+{% endif -%}
+
+{%- if js_include %}
+<script src="{{ js_include }}"></script>
+{% endif -%}
+
+</head>
+<body>
+{% include 'header.njk' %}
+<main>
+{{ content | safe }}
+</main>
+{% include 'footer.njk' %}
+</body>
+</html>
