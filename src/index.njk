@@ -15,7 +15,7 @@ js_include: /assets/js/tween.js
 <div class="container">
 <img src="assets/home-banner.svg">
 <div class="ol-two">
-{%- for post in collections.blog | reverse | limit(2) -%}
+{%- for post in collections.blog | reverse | limit_latest(1) -%}
   {% include 'post-latest.njk' %}
 {%- endfor -%}
 </div>

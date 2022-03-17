@@ -22,22 +22,6 @@
 {%- for post in collections.webDevelopmentPosts | reverse -%}
 {%- include 'post-card.njk' -%}
 {%- endfor -%}
-{%- elif tag == 'css-page' -%}
-{%- for post in collections.cssPosts | reverse -%}
-{%- include 'post-card.njk' -%}
-{%- endfor -%}
-{%- elif tag == 'js-page' -%}
-{%- for post in collections.jsPosts | reverse -%}
-{%- include 'post-card.njk' -%}
-{%- endfor -%}
-{%- elif tag == 'wordpress-page' -%}
-{%- for post in collections.wordpressPosts | reverse -%}
-{%- include 'post-card.njk' -%}
-{%- endfor -%}
-{%- elif tag == 'innovation-page' -%}
-{%- for post in collections.innovationPosts | reverse -%}
-{%- include 'post-card.njk' -%}
-{%- endfor -%}
 {%- else -%}
 {%- for post in collections.blog | reverse -%}
 {%- include 'post-card.njk' -%}

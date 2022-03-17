@@ -1,7 +1,7 @@
 {
-  "name": "JAMStack-blog-starter-main",
+  "name": "11ty Theme by Design 2 SEO",
   "version": "1.0.0",
-  "description": "Design 2 SEO 11ty site",
+  "description": "11ty Starter Theme",
   "main": "index.njk",
   "scripts": {
     "start": "eleventy --serve",
@@ -11,12 +11,7 @@
   "author": "Jeremy Faucher",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.26.0",
     "bufferutil": "^4.0.5",
-    "cheerio": "^1.0.0-rc.10",
-    "chrome-aws-lambda": "^10.1.0",
-    "puppeteer-core": "^13.1.1",
-    "querystring": "^0.2.1",
     "speedlify-score": "^2.0.2",
     "utf-8-validate": "^5.0.7"
   },

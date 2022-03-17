@@ -19,6 +19,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
+  //Latests Summary Limit
+  eleventyConfig.addFilter("limit_latest", function (arr, limit) {
+    return arr.slice(0, limit);
+  });
   //Post Summary Limit
   eleventyConfig.addFilter("limit", function (arr, limit) {
     return arr.slice(1, limit);
