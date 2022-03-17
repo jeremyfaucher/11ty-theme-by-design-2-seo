@@ -361,7 +361,7 @@ align-items: center;
 gap: 3em;
 }
 .hero--content h1 {
-font-size: 54px;
+font-size: 48px;
 font-weight: 700;
 color: var(--clr-primary);
 line-height: 1;
