@@ -1,7 +1,6 @@
 ---
 layout: 'base.njk'
 tag: home-page
-js_include: /assets/js/tween.js
 ---
 <section class="no-bottom">
 <div class="container">
@@ -13,7 +12,7 @@ js_include: /assets/js/tween.js
 </section>
 <section class="hero">
 <div class="container">
-<img src="assets/home-banner.svg">
+<img src="assets/home-banner.svg" alt="girl working at computer thinking creatively">
 <div class="ol-two">
 {%- for post in collections.blog | reverse | limit_latest(1) -%}
   {% include 'post-latest.njk' %}
