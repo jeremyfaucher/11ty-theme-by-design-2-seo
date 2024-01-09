@@ -12,7 +12,7 @@ tag: home-page
 </section>
 <section class="hero">
 <div class="container">
-<img src="assets/home-banner.svg" alt="girl working at computer thinking creatively">
+<img src="assets/home-banner.webp" width="600" height="467" alt="girl working at computer thinking creatively">
 <div class="ol-two">
 {%- for post in collections.blog | reverse | limit_latest(1) -%}
   {% include 'post-latest.njk' %}
@@ -32,7 +32,7 @@ tag: home-page
 <div class="container">
 <h2 class="section-title">Recent Blog Posts</h2>
 <p class="no-top">YOLO pop-up synth fixie, slow-carb, fingerstache.</p>
-<div role="list" class="col-two">
+<div class="col-two">
 {%- for post in collections.blog | reverse | limit(5) -%}
   {% include 'post-summary.njk' %}
 {%- endfor -%}
